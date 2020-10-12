@@ -1,0 +1,11 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  idtb-seeder-register:
+    lang: node
+    handler: ./idtb-seeder-register
+    image: yuan0303/idtb-seeder-register:latest
+    environment_file:
+      - env.yml
